@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-tac-toe</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="game.js"></script>
+  </head>
+  <body onload="init()">
+    <h1>TIC-TAC-TOE</h1>
+    <table id="game_table">
+      <tr>
+        <td class="td_game">
+          <div id="cell0" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+        <td class="td_game">
+          <div id="cell1" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+        <td class="td_game">
+          <div id="cell2" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td_game">
+          <div id="cell3" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+        <td class="td_game">
+          <div id="cell4" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+        <td class="td_game">
+          <div id="cell5" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td_game">
+          <div id="cell6" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+        <td class="td_game">
+          <div id="cell7" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+        <td class="td_game">
+          <div id="cell8" onclick="cellClicked(this.id)" class="fixed"></div>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th class="th_list">Player1</th>
+        <th class="th_list" style="padding-right: 10px; padding-left: 10px">
+          Draws
+        </th>
+        <th class="th_list">Player2</th>
+      </tr>
+      <tr>
+        <td class="td_list" id="player1_score">0</td>
+        <td
+          class="td_list"
+          style="padding-right: 10px; padding-left: 10px"
+          id="tie_score"
+        >
+          0
+        </td>
+        <td class="td_list" id="player2_score">0</td>
+      </tr>
+    </table>
+    <div id="winAnnounce" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <!-- <span class="close" onclick="closeModal('winAnnounce')">&times;</span> -->
+        <p id="winText"></p>
+      </div>
+    </div>
+  </body>
+</html>
